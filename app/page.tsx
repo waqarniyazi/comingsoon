@@ -6,7 +6,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 import Image from 'next/image'
 import logo from '../public/logo.svg'
 
-export function SplineSceneBasic() {
+export default function SplineSceneBasic() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black font-inter">
       <Card className="w-full h-[500px] bg-black relative overflow-hidden border-none rounded-none">
@@ -42,5 +42,3 @@ Questions? Reach us at <a href="mailto:team.aiportalx@gmail.com" className="font
     </div>
   )
 }
-
-export default SplineSceneBasic;
