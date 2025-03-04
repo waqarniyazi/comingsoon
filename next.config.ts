@@ -1,11 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Enable MDX in the new App Router
-  experimental: {
-    mdxRs: true
-  },
-  // Let Next.js treat .mdx files as routes or regular modules
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-};
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = withMDX({
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  // Disable the experimental mdxRs flag since we're using the plugin with Webpack
+  experimental: {
+    mdxRs: false,
+  },
+});
+
+module.exports = nextConfig;
