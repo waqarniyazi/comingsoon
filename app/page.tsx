@@ -15,8 +15,17 @@ export default function SplineSceneBasic() {
         />
         
         <div className="flex h-full">
+      
           {/* Left content */}
           <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
+          <a href="https://www.producthunt.com/posts/aiportalx?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-aiportalx" target="_blank">
+          <Image 
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=932594&theme=dark&t=1741078188733" 
+            alt="AIportalX - Discover&#0044;&#0032;Compare&#0044;&#0032;and&#0032;Leverage&#0032;AI&#0032;Models&#0032;Effortlessly&#0032;🚀 | Product Hunt" 
+            width={250} 
+            height={54} 
+          />
+        </a>
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mt-4 leading-tight">
             A New Way to Explore AI
             </h1>
