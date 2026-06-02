@@ -1,14 +1,12 @@
-const withMDX = require('@next/mdx')({
+import createMDX from '@next/mdx';
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+};
+
+const withMDX = createMDX({
   extension: /\.mdx?$/,
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = withMDX({
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  // Disable the experimental mdxRs flag since we're using the plugin with Webpack
-  experimental: {
-    mdxRs: false,
-  },
-});
-
-module.exports = nextConfig;
+export default withMDX(nextConfig);
